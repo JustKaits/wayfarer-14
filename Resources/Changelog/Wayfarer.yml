@@ -1197,3 +1197,10 @@ Entries:
   id: 6627
   time: '2026-02-01T21:09:19.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/413
+- author: drraccoony
+  changes:
+    - type: Tweak
+      message: Changed Size Manipulator (Hitbox Scaling, Mass Scaling and examine text)
+  id: 6628
+  time: '2026-02-02T05:23:21.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/422
