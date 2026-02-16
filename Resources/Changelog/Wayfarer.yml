@@ -1394,3 +1394,10 @@ Entries:
   id: 6652
   time: '2026-02-12T12:23:42.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/465
+- author: VVersengt
+  changes:
+    - type: Add
+      message: Added Concussive Gauntlets researchable technologies.
+  id: 6653
+  time: '2026-02-12T20:19:44.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/368
