@@ -1419,3 +1419,12 @@ Entries:
   id: 6655
   time: '2026-02-16T20:47:06.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/486
+- author: VVersengt
+  changes:
+    - type: Add
+      message: TI Hauler and variants.
+    - type: Remove
+      message: Frontier ship with the same name.
+  id: 6656
+  time: '2026-02-16T20:48:19.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/482
