@@ -1630,3 +1630,12 @@ Entries:
   id: 6681
   time: '2026-02-24T21:20:46.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/518
+- author: Eillyrea
+  changes:
+    - type: Tweak
+      message: >-
+        Overhauled the UCA Mjolnir, making it look better and it's scrap version
+        more dangerous with better loot
+  id: 6682
+  time: '2026-02-24T21:38:18.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/520
