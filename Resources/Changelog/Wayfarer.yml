@@ -1850,3 +1850,10 @@ Entries:
   id: 6706
   time: '2026-04-11T20:05:01.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/560
+- author: VVersengt
+  changes:
+    - type: Tweak
+      message: Stacks in containers like crates will actually stack together.
+  id: 6707
+  time: '2026-04-11T20:05:13.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/557
