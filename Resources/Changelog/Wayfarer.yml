@@ -1967,3 +1967,23 @@ Entries:
   id: 6721
   time: '2026-04-18T18:23:26.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/597
+- author: VVersengt
+  changes:
+    - type: Fix
+      message: Pets have their idle movement restored.
+    - type: Fix
+      message: >-
+        Newly spawned NPCs will no longer wait 5 seconds before their AI
+        switches on.
+  id: 6722
+  time: '2026-04-19T10:44:24.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/602
+- author: VVersengt
+  changes:
+    - type: Add
+      message: Honey and Honey accessories to ChevVend and Condiment vendors.
+    - type: Tweak
+      message: Hunger and Thirst values... AGAIN.
+  id: 6723
+  time: '2026-04-19T20:06:34.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/603
