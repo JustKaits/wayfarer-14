@@ -25,7 +25,7 @@
       stationProto: StandardFrontierVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Downtownsuperstar CIV{1}'
+        mapNameTemplate: 'Downtown Superstar CIV{1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14'
