@@ -2031,3 +2031,10 @@ Entries:
   id: 6728
   time: '2026-04-19T22:18:38.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/599
+- author: Goodfaun
+  changes:
+    - type: Tweak
+      message: some entities description removal of nanotrasen mentions
+  id: 6729
+  time: '2026-04-20T19:59:00.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/594
