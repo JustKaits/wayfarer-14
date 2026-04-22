@@ -102,7 +102,7 @@
   id: RedHeavyLaser
   damage:
     types:
-      Heat: 45
+      Heat: 45 #Wayfarer 28 -> 45
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
