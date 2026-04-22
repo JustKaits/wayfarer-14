@@ -3,7 +3,7 @@
   id: NFRedLightLaser
   damage:
     types:
-      Heat: 18
+      Heat: 18 #Wayfarer 12 -> 18
   muzzleFlash: &lightMuzzleFlash
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_laser
