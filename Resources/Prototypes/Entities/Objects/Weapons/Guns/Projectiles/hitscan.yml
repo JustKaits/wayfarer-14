@@ -69,7 +69,7 @@
   id: RedLightLaser
   damage:
     types:
-      Heat: 12
+      Heat: 12 #Wayfarer 7 -> 12
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_laser
