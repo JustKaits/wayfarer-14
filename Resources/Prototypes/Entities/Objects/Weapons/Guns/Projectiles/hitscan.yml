@@ -118,7 +118,7 @@
   id: Pulse
   damage:
     types:
-      Heat: 30
+      Heat: 30 #Wayfarer 35 -> 30
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_blue
