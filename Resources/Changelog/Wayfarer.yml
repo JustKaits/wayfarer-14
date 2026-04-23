@@ -2087,3 +2087,12 @@ Entries:
   id: 6736
   time: '2026-04-23T03:32:42.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/628
+- author: JustKaits
+  changes:
+    - type: Add
+      message: Laser damage buff
+    - type: Add
+      message: Laser Cannon fire rate nerf.
+  id: 6737
+  time: '2026-04-23T03:54:15.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/621
