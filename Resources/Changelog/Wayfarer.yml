@@ -2096,3 +2096,10 @@ Entries:
   id: 6737
   time: '2026-04-23T03:54:15.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/621
+- author: sacafe
+  changes:
+    - type: Add
+      message: minor ammo adjustments, better damage varity and spread,
+  id: 6738
+  time: '2026-04-23T03:57:42.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/620
