@@ -2202,3 +2202,10 @@ Entries:
   id: 6749
   time: '2026-04-25T03:25:20.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/650
+- author: Khaomi
+  changes:
+    - type: Add
+      message: Add Amoxla and Avali guidebook entry
+  id: 6750
+  time: '2026-04-25T05:45:55.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/651
