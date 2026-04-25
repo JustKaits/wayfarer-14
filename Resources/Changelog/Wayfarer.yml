@@ -2174,3 +2174,24 @@ Entries:
   id: 6747
   time: '2026-04-25T01:08:58.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/604
+- author: VVersengt
+  changes:
+    - type: Add
+      message: >-
+        Added new items to outlaw uplink, replaced their PDAs with chameleon
+        versions and tweaked some uplink prices.
+    - type: Add
+      message: Added ew outlaw bounties, and simplified others.
+    - type: Tweak
+      message: Cannon projectiles now have radar blips
+    - type: Add
+      message: New contraband tags for items, pending a more focused PR.
+    - type: Add
+      message: >-
+        Data items like hardrives and encrypted data disks are now valuable to
+        Outlaws
+    - type: Fix
+      message: Fixed various issues around Perdition
+  id: 6748
+  time: '2026-04-25T01:58:08.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/648
