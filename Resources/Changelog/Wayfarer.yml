@@ -2291,3 +2291,14 @@ Entries:
   id: 6760
   time: '2026-04-26T15:40:53.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/657
+- author: RoY7x
+  changes:
+    - type: Add
+      message: New Mooring Buoy docking Shuttle for SR's
+    - type: Add
+      message: >-
+        Concordia National Shipyard (CNS) designation available for Zekkean
+        ships.
+  id: 6761
+  time: '2026-04-26T18:01:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/624
