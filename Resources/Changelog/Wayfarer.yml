@@ -2241,3 +2241,10 @@ Entries:
   id: 6754
   time: '2026-04-25T15:47:07.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/653
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Missing localization in Shipyard console
+  id: 6755
+  time: '2026-04-26T07:31:42.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/676
