@@ -2360,3 +2360,16 @@ Entries:
   id: 6769
   time: '2026-04-27T22:37:32.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/689
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: Markings can now be set as toggle-able regardless of layer.
+    - type: Add
+      message: Markings can now have a custom name specified that will show in game.
+    - type: Add
+      message: Markings can now be specified to only allow the user to adjust them.
+    - type: Add
+      message: Markings can now have custom verbiage for putting on and taking off.
+  id: 6770
+  time: '2026-04-27T22:39:30.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/634
