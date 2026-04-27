@@ -734,7 +734,6 @@
           damage:
             types:
              Rot: -4 # Wayfarer: -4
-            groups: # Wayfarer
         # Wayfarer: No addition to damage yet. Rui was testing this to balance splitting rot and cellular mechanics.
         - !type:ModifyBleedAmount # Wayfarer
           conditions: # Wayfarer
