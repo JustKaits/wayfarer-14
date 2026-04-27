@@ -446,7 +446,7 @@ namespace Content.Client.Lobby.UI
 
             Markings.OnMarkingAdded += OnMarkingChange;
             Markings.OnMarkingRemoved += OnMarkingChange;
-            Markings.OnMarkingColorChange += OnMarkingChange;
+            Markings.OnMarkingDataChanged += OnMarkingChange; // Coyote: Markings.OnMarkingColorChange to Markings.OnMarkingDataChanged
             Markings.OnMarkingRankChange += OnMarkingChange;
 
             #endregion Markings
@@ -1058,7 +1058,7 @@ namespace Content.Client.Lobby.UI
 
             _loadoutWindow = new LoadoutWindow(Profile, roleLoadout, roleLoadoutProto, _playerManager.LocalSession, collection)
             {
-                Title = jobProto?.ID + "-loadout",
+                Title = Loc.GetString("loadout-window-title-loadout", ("job", $"{jobProto?.LocalizedName}")),
             };
 
             // Refresh the buttons etc.

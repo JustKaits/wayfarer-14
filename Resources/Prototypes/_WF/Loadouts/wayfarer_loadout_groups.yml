@@ -7,6 +7,7 @@
   # Basic and Department Jumpsuits
   - WFClothingUniformJumpsuitColorGrey
   - WFClothingUniformJumpskirtColorGrey
+  - WFClothingUniformJumpsuitClear
   - WFClothingUniformJumpsuitColorWhite
   - WFClothingUniformJumpskirtColorWhite
   - WFClothingUniformJumpsuitColorBlack
@@ -54,7 +55,6 @@
   - WFClothingUniformJumpsuitEngineeringHazard
   - WFClothingUniformJumpsuitSeniorEngineer
   - WFClothingUniformJumpskirtSeniorEngineer
-  - WFClothingUniformJumpsuitChiefEngineerNT
   - WFClothingUniformJumpsuitChiefEngineer
   - WFClothingUniformJumpskirtChiefEngineer
   - WFClothingUniformJumpsuitChiefEngineerTurtle
@@ -315,6 +315,7 @@
   - WFClothingBackpackDuffel
   - WFClothingBackpackSatchel
   - WFClothingBackpackMessenger
+  - WFClothingBackpackSatchelClear
   - WFClothingBackpackCaptain
   - WFClothingBackpackDuffelCaptain
   - WFClothingBackpackSatchelCaptain
@@ -568,6 +569,7 @@
   loadouts:
   - WFClothingShoesColorBlack
   - WFClothingShoesClothwrap
+  - WFClothingShoesBootsClear
   - WFClothingShoesTourist
   - WFClothingShoesBootsWork
   - WFClothingShoesBootsSalvage
@@ -785,6 +787,7 @@
   - WFClothingHeadsetBrigmedicCommon
   - WFClothingHeadsetAltSecurityCommon
   - WFClothingHeadsetGreyCommon
+  - WFClothingHeadsetClear
   - WFClothingHeadsetCargoCommon
   - WFClothingHeadsetMiningCommon
   - WFClothingHeadsetCommandCommon
@@ -1175,6 +1178,7 @@
   loadouts:
   - WFClothingMaskBreath
   - WFClothingMaskBreathMedical
+  - WFClothingMaskClear
   - WFClothingMaskSterile
   - WFClothingMaskGas
   - WFClothingMaskGasMercenary

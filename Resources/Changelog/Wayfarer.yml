@@ -2110,3 +2110,283 @@ Entries:
   id: 6739
   time: '2026-04-23T04:00:02.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/600
+- author: drraccoony
+  changes:
+    - type: Add
+      message: Added Community Console for goals
+  id: 6740
+  time: '2026-04-23T06:17:31.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/629
+- author: Goodfaun
+  changes:
+    - type: Fix
+      message: freezer vents rotating due to fixrotations command
+  id: 6741
+  time: '2026-04-24T06:28:03.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/641
+- author: Thr3d
+  changes:
+    - type: Fix
+      message: >-
+        Correct name of binoculars and spawn binoculars/scissors in backpack
+        instead of hand
+  id: 6742
+  time: '2026-04-24T09:44:42.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/642
+- author: Khaomi
+  changes:
+    - type: Tweak
+      message: Make organs have "Trash" tag
+  id: 6743
+  time: '2026-04-24T16:50:49.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/643
+- author: BlueSushii
+  changes:
+    - type: Tweak
+      message: Dead drops are scarier
+  id: 6744
+  time: '2026-04-24T17:06:03.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/638
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Removed lootboxmines from the engineering tools generation tables.
+  id: 6745
+  time: '2026-04-24T17:06:20.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/636
+- author: Khaomi
+  changes:
+    - type: Add
+      message: Add Avali
+  id: 6746
+  time: '2026-04-24T18:21:30.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/626
+- author: Feathernights
+  changes:
+    - type: Tweak
+      message: Increased the damage on Silicon's Melee and the Boss units.
+    - type: Tweak
+      message: Silicons no longer slip on slippery objects/reagents/etc.
+    - type: Tweak
+      message: >-
+        Increased the resilience on the Guardian and One Star Unit, including
+        the Crit and Damage thresholds on the One Star.
+  id: 6747
+  time: '2026-04-25T01:08:58.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/604
+- author: VVersengt
+  changes:
+    - type: Add
+      message: >-
+        Added new items to outlaw uplink, replaced their PDAs with chameleon
+        versions and tweaked some uplink prices.
+    - type: Add
+      message: Added ew outlaw bounties, and simplified others.
+    - type: Tweak
+      message: Cannon projectiles now have radar blips
+    - type: Add
+      message: New contraband tags for items, pending a more focused PR.
+    - type: Add
+      message: >-
+        Data items like hardrives and encrypted data disks are now valuable to
+        Outlaws
+    - type: Fix
+      message: Fixed various issues around Perdition
+  id: 6748
+  time: '2026-04-25T01:58:08.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/648
+- author: drraccoony
+  changes:
+    - type: Fix
+      message: Subtle chat can now be filtered
+  id: 6749
+  time: '2026-04-25T03:25:20.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/650
+- author: Khaomi
+  changes:
+    - type: Add
+      message: Add Amoxla and Avali guidebook entry
+  id: 6750
+  time: '2026-04-25T05:45:55.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/651
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Fix vore verb not being disabled when vore consent is disabled
+  id: 6751
+  time: '2026-04-25T05:46:26.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/644
+- author: Goodfaun
+  changes:
+    - type: Fix
+      message: Grand queen ship freezer atmos
+  id: 6752
+  time: '2026-04-25T05:48:57.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/647
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: >-
+        Partly reverts sink volume changes, putting them closer to their
+        original upstream values
+  id: 6753
+  time: '2026-04-25T06:22:12.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/637
+- author: DevArchwave
+  changes:
+    - type: Fix
+      message: >-
+        Old-Kin Vox now have access to proper inventory, and their loadout
+        works.
+  id: 6754
+  time: '2026-04-25T15:47:07.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/653
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Missing localization in Shipyard console
+  id: 6755
+  time: '2026-04-26T07:31:42.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/676
+- author: RoY7x
+  changes:
+    - type: Fix
+      message: Wehfarer plushie now looks right when you equip him on your head!
+  id: 6756
+  time: '2026-04-26T07:42:36.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/673
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: SSD characters no longer breathe, and thus, do not asphyxiate.
+  id: 6757
+  time: '2026-04-26T07:47:39.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/635
+- author: drraccoony
+  changes:
+    - type: Fix
+      message: Fixed weird 0 friction in space
+  id: 6758
+  time: '2026-04-26T08:14:26.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/672
+- author: VVersengt
+  changes:
+    - type: Remove
+      message: Juggernaut suits are no longer available in the ContraVend
+    - type: Tweak
+      message: Vitamin value now adds to a foods biomass value in the Biogenerator
+    - type: Fix
+      message: Fixed the Deep Fryer
+    - type: Remove
+      message: Removed loadout bundles
+  id: 6759
+  time: '2026-04-26T15:39:41.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/677
+- author: TheSlapper
+  changes:
+    - type: Fix
+      message: >-
+        (Miles) Ambient music mutes when in range of an active jukebox or
+        instrument.
+  id: 6760
+  time: '2026-04-26T15:40:53.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/657
+- author: RoY7x
+  changes:
+    - type: Add
+      message: New Mooring Buoy docking Shuttle for SR's
+    - type: Add
+      message: >-
+        Concordia National Shipyard (CNS) designation available for Zekkean
+        ships.
+  id: 6761
+  time: '2026-04-26T18:01:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/624
+- author: drraccoony
+  changes:
+    - type: Add
+      message: Community Goal Terminal now works with a selling pad
+  id: 6762
+  time: '2026-04-26T18:32:20.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/671
+- author: JustKaits
+  changes:
+    - type: Fix
+      message: Rui fixed Grandideals guidebook sprite
+  id: 6763
+  time: '2026-04-26T21:27:29.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/632
+- author: Goodfaun
+  changes:
+    - type: Fix
+      message: Hauler guidebook
+  id: 6764
+  time: '2026-04-27T09:50:58.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/682
+- author: Luweth
+  changes:
+    - type: Add
+      message: Five new discreet loadout items, sprites, etc.
+  id: 6765
+  time: '2026-04-27T09:52:24.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/685
+- author: Goodfaun
+  changes:
+    - type: Fix
+      message: guidebook for Scryer update
+  id: 6766
+  time: '2026-04-27T10:38:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/684
+- author: drraccoony
+  changes:
+    - type: Tweak
+      message: Changed Dusk. (Community Terminal, Directional Signs, Vends)
+  id: 6767
+  time: '2026-04-27T10:49:22.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/679
+- author: TheSlapper
+  changes:
+    - type: Fix
+      message: (Miles) Fixed low midi volume. (Reduce your midi volume slider!)
+  id: 6768
+  time: '2026-04-27T22:23:17.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/688
+- author: Luweth
+  changes:
+    - type: Fix
+      message: Fixed bag!
+    - type: Add
+      message: 'Ears and Suit description '
+  id: 6769
+  time: '2026-04-27T22:37:32.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/689
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: Markings can now be set as toggle-able regardless of layer.
+    - type: Add
+      message: Markings can now have a custom name specified that will show in game.
+    - type: Add
+      message: Markings can now be specified to only allow the user to adjust them.
+    - type: Add
+      message: Markings can now have custom verbiage for putting on and taking off.
+  id: 6770
+  time: '2026-04-27T22:39:30.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/634
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: >-
+        Added a colour picker and colour palette selector to the Spraypainter's
+        decal menu.
+    - type: Tweak
+      message: Made a few other tweaks to the Spraypainter's UI as well.
+    - type: Add
+      message: Added floral decals to the spraypainter.
+    - type: Add
+      message: >-
+        Added syndicate airlocks to the list of spray paintable airlocks
+        options.
+  id: 6771
+  time: '2026-04-27T23:09:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/692
