@@ -20,6 +20,9 @@
       "name": "toxin"
     },
     {
+      "name": "rot" //Wayfarer: Added rot damage type.
+    },
+    {
       "name": "burn"
     },
     {
