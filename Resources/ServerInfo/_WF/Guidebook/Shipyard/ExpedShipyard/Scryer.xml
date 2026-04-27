@@ -15,7 +15,7 @@
 
   # Shuttle Brief
 
-  "A Medium sized vessel specializing in science operations."
+  "A Medium sized vessel specializing in expedtions."
 
   "Manufactured by TI"
 
@@ -23,9 +23,9 @@
 
   ship functions
 
-  # Science
+  # Expeditions
 
-  [textlink="Science" link="Science"/]
+  [textlink="Expeditions" link="Expeditions"/]
 
   # Piloting
 
