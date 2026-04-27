@@ -2,7 +2,7 @@
   id: Downtownsuperstar
   parent: BaseVessel
   name: TGA Downtown Superstar
-  description: A heavy duty salvaging ship designed with mercenary enforcement in mind.
+  description: A heavy duty salvaging ship designed with engineering and cargo hauling in mind.
   price: 167500
   category: Large
   group: Shipyard
