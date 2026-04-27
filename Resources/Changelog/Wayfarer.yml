@@ -2330,3 +2330,10 @@ Entries:
   id: 6765
   time: '2026-04-27T09:52:24.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/685
+- author: Goodfaun
+  changes:
+    - type: Fix
+      message: guidebook for Scryer update
+  id: 6766
+  time: '2026-04-27T10:38:52.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/684
