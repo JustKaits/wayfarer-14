@@ -2390,3 +2390,49 @@ Entries:
   id: 6771
   time: '2026-04-27T23:09:52.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/692
+- author: TheSlapper
+  changes:
+    - type: Tweak
+      message: (Miles) Improved the Elite Pirate Hardsuit's headlamp.
+  id: 6772
+  time: '2026-04-27T23:57:08.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/690
+- author: Khaomi
+  changes:
+    - type: Fix
+      message: Pat verb using bike horn sound
+  id: 6773
+  time: '2026-04-28T07:34:46.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/696
+- author: VVersengt
+  changes:
+    - type: Remove
+      message: Agent IDs can no longer copy or change NanoChat IDs
+  id: 6774
+  time: '2026-04-28T14:53:19.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/697
+- author: drraccoony
+  changes:
+    - type: Tweak
+      message: Ghosts wont hear notification pings
+  id: 6775
+  time: '2026-04-28T14:53:39.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/694
+- author: Luweth
+  changes:
+    - type: Add
+      message: Added Colors for blips! (Really simple.)
+  id: 6776
+  time: '2026-04-28T14:54:16.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/693
+- author: Luweth
+  changes:
+    - type: Add
+      message: A guide and new displacement maps!
+    - type: Remove
+      message: Residual weirdness
+    - type: Fix
+      message: Proper species components, various functional issues!
+  id: 6777
+  time: '2026-04-28T14:55:49.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/691
