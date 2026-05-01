@@ -15,5 +15,5 @@ public sealed partial class AmeFuelContainerComponent : Component
     /// The maximum fuel capacity of the container.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public int FuelCapacity = 1000; // Wayfarer: Increased capacity.
+    public int FuelCapacity = 1000; // Wayfarer: 500<1000
 }
