@@ -1,7 +1,7 @@
 #region Rockets
 
 - type: entity
-  parent: [BaseItem, BaseC2ContrabandUnredeemable]
+  parent: [ BaseItem, BaseDDContraband ] # Wayfarer: BaseC2ContrabandUnredeemable<BaseDDContraband
   id: NFBaseCartridgeRocket
   abstract: true
   components:
@@ -121,9 +121,9 @@
   - type: CartridgeAmmo
     proto: NFBulletGrenadeEMP
   - type: EmpDescription
-    range: 5
+    range: 8 #Wayfarer 5<8 # Makes them not useless
     energyConsumption: 2700000
-    disableDuration: 10
+    disableDuration: 12.5 #Wayfarer 10 -> 12.5
 
 # Cannon Balls
 
@@ -164,3 +164,8 @@
     range: 4
     energyConsumption: 2700000
     disableDuration: 60
+  - type: RadarBlip # Wayfarer: Add Radar Blip
+    scale: 2
+    shape: Triangle
+    visibleFromOtherGrids: true
+    radarColor: '#00FFFF' # EMP

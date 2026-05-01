@@ -73,6 +73,7 @@ public sealed partial class ChatUIController : UIController
     private static readonly ProtoId<ColorPalettePrototype> ChatNamePalette = "ChatNames";
     private string[] _chatNameColors = default!;
     private bool _chatNameColorsEnabled;
+    private bool _chatBodyColorsEnabled;
 
     private ISawmill _sawmill = default!;
 
@@ -193,6 +194,8 @@ public sealed partial class ChatUIController : UIController
         SubscribeNetworkEvent<DamageForceSayEvent>(OnDamageForceSay);
         _config.OnValueChanged(CCVars.ChatEnableColorName, (value) => { _chatNameColorsEnabled = value; });
         _chatNameColorsEnabled = _config.GetCVar(CCVars.ChatEnableColorName);
+        _config.OnValueChanged(CCVars.ChatEnableBodyColor, (value) => { _chatBodyColorsEnabled = value; });
+        _chatBodyColorsEnabled = _config.GetCVar(CCVars.ChatEnableBodyColor);
 
         _speechBubbleRoot = new LayoutContainer();
 
@@ -849,6 +852,12 @@ public sealed partial class ChatUIController : UIController
                 msg.WrappedMessage = SharedChatSystem.InjectTagInsideTag(msg, "Name", "color", GetNameColor(SharedChatSystem.GetStringInsideTag(msg, "Name")));
         }
 
+        // Strip body color if accessibility option is disabled
+        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper) && !_chatBodyColorsEnabled)
+        {
+            msg.WrappedMessage = SharedChatSystem.StripColorTagAroundTag(msg, "BubbleContent");
+        }
+
         // Color any words chosen by the client.
         var highlightMatched = false;
         foreach (var highlight in _highlights)
@@ -860,13 +869,13 @@ public sealed partial class ChatUIController : UIController
         }
 
         // Play mention sound if a highlight was matched
-        if (highlightMatched && _mentionSoundEnabled && _audio != null)
+        if (highlightMatched && _mentionSoundEnabled && _audio != null && _ghost is not {IsGhost: true})
         {
-            _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/mention.ogg", Filter.Local(), false);
+            _audio.PlayGlobal("/Audio/_CS/UserInterface/mention.ogg", Filter.Local(), false);
         }
 
         // Play LOOC sound notification if enabled and on cooldown
-        if (_loocSoundEnabled && _audio != null && (msg.Channel == ChatChannel.LOOC || msg.Channel == ChatChannel.SubtleLOOC))
+        if (_loocSoundEnabled && _audio != null && _ghost is not {IsGhost: true} && (msg.Channel == ChatChannel.LOOC || msg.Channel == ChatChannel.SubtleLOOC))
         {
             var isOwnMessage = _player.LocalEntity != null && _ent.GetEntity(msg.SenderEntity) == _player.LocalEntity;
             var currentTime = _timing.CurTime;
@@ -875,7 +884,7 @@ public sealed partial class ChatUIController : UIController
             {
                 if ((currentTime - _lastLoocSoundTime) >= SoundCooldown)
                 {
-                    _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/looc_sound.ogg", Filter.Local(), false);
+                    _audio.PlayGlobal("/Audio/_CS/UserInterface/looc_sound.ogg", Filter.Local(), false);
                 }
                 // Reset cooldown timer on each message to avoid interrupting conversations
                 _lastLoocSoundTime = currentTime;
@@ -883,7 +892,7 @@ public sealed partial class ChatUIController : UIController
         }
 
         // Play Subtle sound notification if enabled (for subtle emotes)
-        if (_subtleSoundEnabled && _audio != null && msg.IsSubtle)
+        if (_subtleSoundEnabled && _audio != null && _ghost is not {IsGhost: true} && msg.IsSubtle)
         {
             var isOwnMessage = _player.LocalEntity != null && _ent.GetEntity(msg.SenderEntity) == _player.LocalEntity;
             var currentTime = _timing.CurTime;
@@ -892,7 +901,7 @@ public sealed partial class ChatUIController : UIController
             {
                 if ((currentTime - _lastSubtleSoundTime) >= SoundCooldown)
                 {
-                    _audio.PlayGlobal("/Audio/_COYOTE/UserInterface/subtle_sound.ogg", Filter.Local(), false);
+                    _audio.PlayGlobal("/Audio/_CS/UserInterface/subtle_sound.ogg", Filter.Local(), false);
                 }
                 // Reset cooldown timer on each message to avoid interrupting conversations
                 _lastSubtleSoundTime = currentTime;
@@ -952,6 +961,10 @@ public sealed partial class ChatUIController : UIController
                 break;
 
             case ChatChannel.Emotes:
+                AddSpeechBubble(msg, SpeechBubble.SpeechType.Emote);
+                break;
+
+            case ChatChannel.Subtle:
                 AddSpeechBubble(msg, SpeechBubble.SpeechType.Emote);
                 break;
 

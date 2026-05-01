@@ -14,6 +14,7 @@ using Content.Server.Clothing.Systems;
 using Content.Server.Implants;
 using Content.Shared.Implants;
 using Content.Shared.Inventory;
+using Content.Shared.Lock;
 using Content.Shared.PDA;
 
 namespace Content.Server.Access.Systems
@@ -24,9 +25,10 @@ namespace Content.Server.Access.Systems
         [Dependency] private readonly IdCardSystem _cardSystem = default!;
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly SharedNanoChatSystem _nanoChat = default!; // DeltaV
+        //[Dependency] private readonly SharedNanoChatSystem _nanoChat = default!; // DeltaV // Wayfarer: Disabled
         [Dependency] private readonly ChameleonClothingSystem _chameleon = default!;
         [Dependency] private readonly ChameleonControllerSystem _chamController = default!;
+        [Dependency] private readonly LockSystem _lock = default!;
 
         public override void Initialize()
         {
@@ -37,19 +39,19 @@ namespace Content.Server.Access.Systems
             SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardNameChangedMessage>(OnNameChanged);
             SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardJobChangedMessage>(OnJobChanged);
             SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardJobIconChangedMessage>(OnJobIconChanged);
-            SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardNumberChangedMessage>(OnNumberChanged); // DeltaV
+            //SubscribeLocalEvent<AgentIDCardComponent, AgentIDCardNumberChangedMessage>(OnNumberChanged); // DeltaV // Wayfarer: Disabled
             SubscribeLocalEvent<AgentIDCardComponent, InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent>>(OnChameleonControllerOutfitChangedItem);
         }
 
-        // DeltaV - Add number change handler
-        private void OnNumberChanged(Entity<AgentIDCardComponent> ent, ref AgentIDCardNumberChangedMessage args)
-        {
-            if (!TryComp<NanoChatCardComponent>(ent, out var comp))
-                return;
-
-            _nanoChat.SetNumber((ent, comp), args.Number);
-            Dirty(ent, comp);
-        }
+        // // DeltaV - Add number change handler // Wayfarer: Disabled
+        // private void OnNumberChanged(Entity<AgentIDCardComponent> ent, ref AgentIDCardNumberChangedMessage args)
+        // {
+        //     if (!TryComp<NanoChatCardComponent>(ent, out var comp))
+        //         return;
+        //
+        //     _nanoChat.SetNumber((ent, comp), args.Number);
+        //     Dirty(ent, comp);
+        // }
 
         private void OnChameleonControllerOutfitChangedItem(Entity<AgentIDCardComponent> ent, ref InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent> args)
         {
@@ -92,7 +94,8 @@ namespace Content.Server.Access.Systems
 
         private void OnAfterInteract(EntityUid uid, AgentIDCardComponent component, AfterInteractEvent args)
         {
-            if (args.Target == null || !args.CanReach || !TryComp<AccessComponent>(args.Target, out var targetAccess) || !HasComp<IdCardComponent>(args.Target))
+            if (args.Target == null || !args.CanReach || _lock.IsLocked(uid) ||
+                !TryComp<AccessComponent>(args.Target, out var targetAccess) || !HasComp<IdCardComponent>(args.Target))
                 return;
 
             if (!TryComp<AccessComponent>(uid, out var access) || !HasComp<IdCardComponent>(uid))
@@ -102,33 +105,33 @@ namespace Content.Server.Access.Systems
             access.Tags.UnionWith(targetAccess.Tags);
             var addedLength = access.Tags.Count - beforeLength;
 
-            // DeltaV - Copy NanoChat data if available
-            if (TryComp<NanoChatCardComponent>(args.Target, out var targetNanoChat) &&
-                TryComp<NanoChatCardComponent>(uid, out var agentNanoChat))
-            {
-                // First clear existing data
-                _nanoChat.Clear((uid, agentNanoChat));
-
-                // Copy the number
-                if (_nanoChat.GetNumber((args.Target.Value, targetNanoChat)) is { } number)
-                    _nanoChat.SetNumber((uid, agentNanoChat), number);
-
-                // Copy all recipients and their messages
-                foreach (var (recipientNumber, recipient) in _nanoChat.GetRecipients((args.Target.Value, targetNanoChat)))
-                {
-                    _nanoChat.SetRecipient((uid, agentNanoChat), recipientNumber, recipient);
-
-                    if (_nanoChat.GetMessagesForRecipient((args.Target.Value, targetNanoChat), recipientNumber) is not
-                        { } messages)
-                        continue;
-
-                    foreach (var message in messages)
-                    {
-                        _nanoChat.AddMessage((uid, agentNanoChat), recipientNumber, message);
-                    }
-                }
-            }
-            // End DeltaV
+            // // DeltaV - Copy NanoChat data if available // Wayfarer: Disabled
+            // if (TryComp<NanoChatCardComponent>(args.Target, out var targetNanoChat) &&
+            //     TryComp<NanoChatCardComponent>(uid, out var agentNanoChat))
+            // {
+            //     // First clear existing data
+            //     _nanoChat.Clear((uid, agentNanoChat));
+            //
+            //     // Copy the number
+            //     if (_nanoChat.GetNumber((args.Target.Value, targetNanoChat)) is { } number)
+            //         _nanoChat.SetNumber((uid, agentNanoChat), number);
+            //
+            //     // Copy all recipients and their messages
+            //     foreach (var (recipientNumber, recipient) in _nanoChat.GetRecipients((args.Target.Value, targetNanoChat)))
+            //     {
+            //         _nanoChat.SetRecipient((uid, agentNanoChat), recipientNumber, recipient);
+            //
+            //         if (_nanoChat.GetMessagesForRecipient((args.Target.Value, targetNanoChat), recipientNumber) is not
+            //             { } messages)
+            //             continue;
+            //
+            //         foreach (var message in messages)
+            //         {
+            //             _nanoChat.AddMessage((uid, agentNanoChat), recipientNumber, message);
+            //         }
+            //     }
+            // }
+            // // End DeltaV
 
             if (addedLength == 0)
             {
@@ -155,17 +158,17 @@ namespace Content.Server.Access.Systems
             if (!TryComp<IdCardComponent>(uid, out var idCard))
                 return;
 
-            // DeltaV - Get current number if it exists
-            uint? currentNumber = null;
-            if (TryComp<NanoChatCardComponent>(uid, out var comp))
-                currentNumber = comp.Number;
-
-            var state = new AgentIDCardBoundUserInterfaceState(
-                idCard.FullName ?? "",
-                idCard.LocalizedJobTitle ?? "",
-                idCard.JobIcon,
-                currentNumber); // DeltaV - Pass current number
-
+            // // DeltaV - Get current number if it exists // Wayfarer: Disabled
+            // uint? currentNumber = null;
+            // if (TryComp<NanoChatCardComponent>(uid, out var comp))
+            //     currentNumber = comp.Number;
+            //
+            // var state = new AgentIDCardBoundUserInterfaceState(
+            //     idCard.FullName ?? "",
+            //     idCard.LocalizedJobTitle ?? "",
+            //     idCard.JobIcon,
+            //     currentNumber); // DeltaV - Pass current number
+            var state = new AgentIDCardBoundUserInterfaceState(idCard.FullName ?? "", idCard.LocalizedJobTitle ?? "", idCard.JobIcon);
             _uiSystem.SetUiState(uid, AgentIDCardUiKey.Key, state);
         }
 
